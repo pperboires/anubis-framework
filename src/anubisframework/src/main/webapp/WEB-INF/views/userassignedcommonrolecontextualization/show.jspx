@@ -1,0 +1,35 @@
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" xmlns:form="http://www.springframework.org/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <script type="text/javascript">dojo.require('dijit.TitlePane');</script>
+    <div id="_title_div">
+        <spring:message code="label.userassignedcommonrolecontextualization" var="entity_label"/>
+        <spring:message arguments="${entity_label}" code="entity.show" var="title_msg"/>
+        <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_title_div', widgetType : 'dijit.TitlePane', widgetAttrs : {title: '${title_msg}'}})); </script>
+        <c:if test="${not empty userAssignedCommonRoleContextualization}">
+            <div id="roo_userAssignedCommonRoleContextualization_userAssignedCommonRole">
+                <label for="_userAssignedCommonRole_id">User Assigned Common Role:</label>
+                <div class="box" id="_userAssignedCommonRole_id">
+                    <c:out value="${userAssignedCommonRoleContextualization.userAssignedCommonRole}"/>
+                </div>
+            </div>
+            <br/>
+            <div id="roo_userAssignedCommonRoleContextualization_contextValue">
+                <label for="_contextValue_id">Context Value:</label>
+                <div class="box" id="_contextValue_id">
+                    <c:out value="${userAssignedCommonRoleContextualization.contextValue}"/>
+                </div>
+            </div>
+            <br/>
+            <div id="roo_userAssignedCommonRoleContextualization_commonRoleAssignedPermission">
+                <label for="_commonRoleAssignedPermission_id">Common Role Assigned Permission:</label>
+                <div class="box" id="_commonRoleAssignedPermission_id">
+                    <c:out value="${userAssignedCommonRoleContextualization.commonRoleAssignedPermission}"/>
+                </div>
+            </div>
+            <br/>
+        </c:if>
+        <c:if test="${empty userAssignedCommonRoleContextualization}">
+            <spring:message arguments="${entity_label}" code="entity.not.found.single"/>
+        </c:if>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:form="http://www.springframework.org/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <script type="text/javascript">dojo.require('dijit.TitlePane');dojo.require('dijit.form.FilteringSelect');</script>
+    <div id="_title_div">
+        <spring:message code="label.characterizedgroupassignedcommonrole" var="entity_label"/>
+        <spring:message arguments="${entity_label}" code="entity.update" var="title_msg"/>
+        <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_title_div', widgetType : 'dijit.TitlePane', widgetAttrs : {title: '${title_msg}'}})); </script>
+        <spring:url value="/characterizedgroupassignedcommonrole/${characterizedGroupAssignedCommonRole.uid}" var="form_url"/>
+        <form:form action="${form_url}" method="PUT" modelAttribute="characterizedGroupAssignedCommonRole">
+            <form:errors cssClass="errors" delimiter="&lt;p/&gt;"/>
+            <div id="roo_characterizedGroupAssignedCommonRole_commonRole">
+                <c:if test="${not empty commonroles}">
+                    <label for="_commonRole_id">Common Role:</label>
+                    <form:select cssStyle="width:250px" id="_commonRole_id" path="commonRole">
+                        <form:options itemValue="uid" items="${commonroles}"/>
+                    </form:select>
+                    <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_commonRole_id', widgetType: 'dijit.form.FilteringSelect', widgetAttrs : {hasDownArrow : true}})); </script>
+                </c:if>
+            </div>
+            <br/>
+            <div id="roo_characterizedGroupAssignedCommonRole_characterizedGroup">
+                <c:if test="${not empty characterizedgroups}">
+                    <label for="_characterizedGroup_id">Characterized Group:</label>
+                    <form:select cssStyle="width:250px" id="_characterizedGroup_id" path="characterizedGroup">
+                        <form:options itemValue="uid" items="${characterizedgroups}"/>
+                    </form:select>
+                    <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_characterizedGroup_id', widgetType: 'dijit.form.FilteringSelect', widgetAttrs : {hasDownArrow : true}})); </script>
+                </c:if>
+            </div>
+            <br/>
+            <div class="submit" id="roo_characterizedGroupAssignedCommonRole_submit">
+                <spring:message code="button.update" var="update_button"/>
+                <script type="text/javascript">Spring.addDecoration(new Spring.ValidateAllDecoration({elementId:'proceed', event:'onclick'}));</script>
+                <input id="proceed" type="submit" value="${update_button}"/>
+            </div>
+            <form:hidden id="_uid_id" path="uid"/>
+            <form:hidden id="_version_id" path="version"/>
+        </form:form>
+    </div>
+</div>

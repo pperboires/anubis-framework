@@ -1,0 +1,1056 @@
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" id="menu" version="2.0">
+	<jsp:output omit-xml-declaration="yes"/>
+	<ul id="roo_menu">
+			
+	<li id="web_mvc_jsp_commonroletranslation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_commonroletranslation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_commonroletranslation_menu_item">
+                    <spring:url value="/commonroletranslation/form" var="web_mvc_jsp_create_commonroletranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_commonroletranslation_menu_item_url}">
+                        <spring:message code="label.commonroletranslation" var="label_commonroletranslation"/>
+                        <spring:message arguments="${label_commonroletranslation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_commonroletranslation_menu_item">
+                    <spring:url value="/commonroletranslation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_commonroletranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_commonroletranslation_menu_item_url}">
+                        <spring:message code="label.commonroletranslations" var="label_commonroletranslations"/>
+                        <spring:message arguments="${label_commonroletranslations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_validity_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_validity_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_validity_menu_item">
+                    <spring:url value="/validity/form" var="web_mvc_jsp_create_validity_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_validity_menu_item_url}">
+                        <spring:message code="label.validity" var="label_validity"/>
+                        <spring:message arguments="${label_validity}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_validity_menu_item">
+                    <spring:url value="/validity?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_validity_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_validity_menu_item_url}">
+                        <spring:message code="label.validitys" var="label_validitys"/>
+                        <spring:message arguments="${label_validitys}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_useraccount_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_useraccount_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_useraccount_menu_item">
+                    <spring:url value="/useraccount/form" var="web_mvc_jsp_create_useraccount_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_useraccount_menu_item_url}">
+                        <spring:message code="label.useraccount" var="label_useraccount"/>
+                        <spring:message arguments="${label_useraccount}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_useraccount_menu_item">
+                    <spring:url value="/useraccount?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_useraccount_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_useraccount_menu_item_url}">
+                        <spring:message code="label.useraccounts" var="label_useraccounts"/>
+                        <spring:message arguments="${label_useraccounts}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_administrativerole_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_administrativerole_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_administrativerole_menu_item">
+                    <spring:url value="/administrativerole/form" var="web_mvc_jsp_create_administrativerole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_administrativerole_menu_item_url}">
+                        <spring:message code="label.administrativerole" var="label_administrativerole"/>
+                        <spring:message arguments="${label_administrativerole}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_administrativerole_menu_item">
+                    <spring:url value="/administrativerole?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_administrativerole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_administrativerole_menu_item_url}">
+                        <spring:message code="label.administrativeroles" var="label_administrativeroles"/>
+                        <spring:message arguments="${label_administrativeroles}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_user_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_user_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_user_menu_item">
+                    <spring:url value="/user/form" var="web_mvc_jsp_create_user_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_user_menu_item_url}">
+                        <spring:message code="label.user" var="label_user"/>
+                        <spring:message arguments="${label_user}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_user_menu_item">
+                    <spring:url value="/user?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_user_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_user_menu_item_url}">
+                        <spring:message code="label.users" var="label_users"/>
+                        <spring:message arguments="${label_users}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_administrativeroletranslation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_administrativeroletranslation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_administrativeroletranslation_menu_item">
+                    <spring:url value="/administrativeroletranslation/form" var="web_mvc_jsp_create_administrativeroletranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_administrativeroletranslation_menu_item_url}">
+                        <spring:message code="label.administrativeroletranslation" var="label_administrativeroletranslation"/>
+                        <spring:message arguments="${label_administrativeroletranslation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_administrativeroletranslation_menu_item">
+                    <spring:url value="/administrativeroletranslation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_administrativeroletranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_administrativeroletranslation_menu_item_url}">
+                        <spring:message code="label.administrativeroletranslations" var="label_administrativeroletranslations"/>
+                        <spring:message arguments="${label_administrativeroletranslations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_manualgroup_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_manualgroup_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_manualgroup_menu_item">
+                    <spring:url value="/manualgroup/form" var="web_mvc_jsp_create_manualgroup_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_manualgroup_menu_item_url}">
+                        <spring:message code="label.manualgroup" var="label_manualgroup"/>
+                        <spring:message arguments="${label_manualgroup}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_manualgroup_menu_item">
+                    <spring:url value="/manualgroup?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_manualgroup_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_manualgroup_menu_item_url}">
+                        <spring:message code="label.manualgroups" var="label_manualgroups"/>
+                        <spring:message arguments="${label_manualgroups}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_contexttranslation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_contexttranslation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_contexttranslation_menu_item">
+                    <spring:url value="/contexttranslation/form" var="web_mvc_jsp_create_contexttranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_contexttranslation_menu_item_url}">
+                        <spring:message code="label.contexttranslation" var="label_contexttranslation"/>
+                        <spring:message arguments="${label_contexttranslation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_contexttranslation_menu_item">
+                    <spring:url value="/contexttranslation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_contexttranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_contexttranslation_menu_item_url}">
+                        <spring:message code="label.contexttranslations" var="label_contexttranslations"/>
+                        <spring:message arguments="${label_contexttranslations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_contextvaluetranslation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_contextvaluetranslation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_contextvaluetranslation_menu_item">
+                    <spring:url value="/contextvaluetranslation/form" var="web_mvc_jsp_create_contextvaluetranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_contextvaluetranslation_menu_item_url}">
+                        <spring:message code="label.contextvaluetranslation" var="label_contextvaluetranslation"/>
+                        <spring:message arguments="${label_contextvaluetranslation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_contextvaluetranslation_menu_item">
+                    <spring:url value="/contextvaluetranslation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_contextvaluetranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_contextvaluetranslation_menu_item_url}">
+                        <spring:message code="label.contextvaluetranslations" var="label_contextvaluetranslations"/>
+                        <spring:message arguments="${label_contextvaluetranslations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_characteristic_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_characteristic_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_characteristic_menu_item">
+                    <spring:url value="/characteristic/form" var="web_mvc_jsp_create_characteristic_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_characteristic_menu_item_url}">
+                        <spring:message code="label.characteristic" var="label_characteristic"/>
+                        <spring:message arguments="${label_characteristic}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_characteristic_menu_item">
+                    <spring:url value="/characteristic?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_characteristic_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_characteristic_menu_item_url}">
+                        <spring:message code="label.characteristics" var="label_characteristics"/>
+                        <spring:message arguments="${label_characteristics}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_manualgrouptranslation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_manualgrouptranslation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_manualgrouptranslation_menu_item">
+                    <spring:url value="/manualgrouptranslation/form" var="web_mvc_jsp_create_manualgrouptranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_manualgrouptranslation_menu_item_url}">
+                        <spring:message code="label.manualgrouptranslation" var="label_manualgrouptranslation"/>
+                        <spring:message arguments="${label_manualgrouptranslation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_manualgrouptranslation_menu_item">
+                    <spring:url value="/manualgrouptranslation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_manualgrouptranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_manualgrouptranslation_menu_item_url}">
+                        <spring:message code="label.manualgrouptranslations" var="label_manualgrouptranslations"/>
+                        <spring:message arguments="${label_manualgrouptranslations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_application_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_application_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_application_menu_item">
+                    <spring:url value="/application/form" var="web_mvc_jsp_create_application_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_application_menu_item_url}">
+                        <spring:message code="label.application" var="label_application"/>
+                        <spring:message arguments="${label_application}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_application_menu_item">
+                    <spring:url value="/application?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_application_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_application_menu_item_url}">
+                        <spring:message code="label.applications" var="label_applications"/>
+                        <spring:message arguments="${label_applications}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_permission_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_permission_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_permission_menu_item">
+                    <spring:url value="/permission/form" var="web_mvc_jsp_create_permission_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_permission_menu_item_url}">
+                        <spring:message code="label.permission" var="label_permission"/>
+                        <spring:message arguments="${label_permission}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_permission_menu_item">
+                    <spring:url value="/permission?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_permission_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_permission_menu_item_url}">
+                        <spring:message code="label.permissions" var="label_permissions"/>
+                        <spring:message arguments="${label_permissions}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_characteristicvaluetranslation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_characteristicvaluetranslation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_characteristicvaluetranslation_menu_item">
+                    <spring:url value="/characteristicvaluetranslation/form" var="web_mvc_jsp_create_characteristicvaluetranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_characteristicvaluetranslation_menu_item_url}">
+                        <spring:message code="label.characteristicvaluetranslation" var="label_characteristicvaluetranslation"/>
+                        <spring:message arguments="${label_characteristicvaluetranslation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_characteristicvaluetranslation_menu_item">
+                    <spring:url value="/characteristicvaluetranslation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_characteristicvaluetranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_characteristicvaluetranslation_menu_item_url}">
+                        <spring:message code="label.characteristicvaluetranslations" var="label_characteristicvaluetranslations"/>
+                        <spring:message arguments="${label_characteristicvaluetranslations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_resourcetypetranslation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_resourcetypetranslation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_resourcetypetranslation_menu_item">
+                    <spring:url value="/resourcetypetranslation/form" var="web_mvc_jsp_create_resourcetypetranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_resourcetypetranslation_menu_item_url}">
+                        <spring:message code="label.resourcetypetranslation" var="label_resourcetypetranslation"/>
+                        <spring:message arguments="${label_resourcetypetranslation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_resourcetypetranslation_menu_item">
+                    <spring:url value="/resourcetypetranslation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_resourcetypetranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_resourcetypetranslation_menu_item_url}">
+                        <spring:message code="label.resourcetypetranslations" var="label_resourcetypetranslations"/>
+                        <spring:message arguments="${label_resourcetypetranslations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_context_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_context_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_context_menu_item">
+                    <spring:url value="/context/form" var="web_mvc_jsp_create_context_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_context_menu_item_url}">
+                        <spring:message code="label.context" var="label_context"/>
+                        <spring:message arguments="${label_context}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_context_menu_item">
+                    <spring:url value="/context?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_context_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_context_menu_item_url}">
+                        <spring:message code="label.contexts" var="label_contexts"/>
+                        <spring:message arguments="${label_contexts}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_locale_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_locale_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_locale_menu_item">
+                    <spring:url value="/locale/form" var="web_mvc_jsp_create_locale_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_locale_menu_item_url}">
+                        <spring:message code="label.locale" var="label_locale"/>
+                        <spring:message arguments="${label_locale}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_locale_menu_item">
+                    <spring:url value="/locale?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_locale_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_locale_menu_item_url}">
+                        <spring:message code="label.locales" var="label_locales"/>
+                        <spring:message arguments="${label_locales}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_characteristicvalue_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_characteristicvalue_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_characteristicvalue_menu_item">
+                    <spring:url value="/characteristicvalue/form" var="web_mvc_jsp_create_characteristicvalue_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_characteristicvalue_menu_item_url}">
+                        <spring:message code="label.characteristicvalue" var="label_characteristicvalue"/>
+                        <spring:message arguments="${label_characteristicvalue}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_characteristicvalue_menu_item">
+                    <spring:url value="/characteristicvalue?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_characteristicvalue_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_characteristicvalue_menu_item_url}">
+                        <spring:message code="label.characteristicvalues" var="label_characteristicvalues"/>
+                        <spring:message arguments="${label_characteristicvalues}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_commonrole_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_commonrole_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_commonrole_menu_item">
+                    <spring:url value="/commonrole/form" var="web_mvc_jsp_create_commonrole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_commonrole_menu_item_url}">
+                        <spring:message code="label.commonrole" var="label_commonrole"/>
+                        <spring:message arguments="${label_commonrole}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_commonrole_menu_item">
+                    <spring:url value="/commonrole?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_commonrole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_commonrole_menu_item_url}">
+                        <spring:message code="label.commonroles" var="label_commonroles"/>
+                        <spring:message arguments="${label_commonroles}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_userassignedcommonrole_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_userassignedcommonrole_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_userassignedcommonrole_menu_item">
+                    <spring:url value="/userassignedcommonrole/form" var="web_mvc_jsp_create_userassignedcommonrole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_userassignedcommonrole_menu_item_url}">
+                        <spring:message code="label.userassignedcommonrole" var="label_userassignedcommonrole"/>
+                        <spring:message arguments="${label_userassignedcommonrole}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_userassignedcommonrole_menu_item">
+                    <spring:url value="/userassignedcommonrole?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_userassignedcommonrole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_userassignedcommonrole_menu_item_url}">
+                        <spring:message code="label.userassignedcommonroles" var="label_userassignedcommonroles"/>
+                        <spring:message arguments="${label_userassignedcommonroles}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_operation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_operation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_operation_menu_item">
+                    <spring:url value="/operation/form" var="web_mvc_jsp_create_operation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_operation_menu_item_url}">
+                        <spring:message code="label.operation" var="label_operation"/>
+                        <spring:message arguments="${label_operation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_operation_menu_item">
+                    <spring:url value="/operation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_operation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_operation_menu_item_url}">
+                        <spring:message code="label.operations" var="label_operations"/>
+                        <spring:message arguments="${label_operations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_characterizedgrouptranslation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_characterizedgrouptranslation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_characterizedgrouptranslation_menu_item">
+                    <spring:url value="/characterizedgrouptranslation/form" var="web_mvc_jsp_create_characterizedgrouptranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_characterizedgrouptranslation_menu_item_url}">
+                        <spring:message code="label.characterizedgrouptranslation" var="label_characterizedgrouptranslation"/>
+                        <spring:message arguments="${label_characterizedgrouptranslation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_characterizedgrouptranslation_menu_item">
+                    <spring:url value="/characterizedgrouptranslation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_characterizedgrouptranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_characterizedgrouptranslation_menu_item_url}">
+                        <spring:message code="label.characterizedgrouptranslations" var="label_characterizedgrouptranslations"/>
+                        <spring:message arguments="${label_characterizedgrouptranslations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_contextvalue_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_contextvalue_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_contextvalue_menu_item">
+                    <spring:url value="/contextvalue/form" var="web_mvc_jsp_create_contextvalue_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_contextvalue_menu_item_url}">
+                        <spring:message code="label.contextvalue" var="label_contextvalue"/>
+                        <spring:message arguments="${label_contextvalue}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_contextvalue_menu_item">
+                    <spring:url value="/contextvalue?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_contextvalue_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_contextvalue_menu_item_url}">
+                        <spring:message code="label.contextvalues" var="label_contextvalues"/>
+                        <spring:message arguments="${label_contextvalues}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_characterizedgroup_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_characterizedgroup_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_characterizedgroup_menu_item">
+                    <spring:url value="/characterizedgroup/form" var="web_mvc_jsp_create_characterizedgroup_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_characterizedgroup_menu_item_url}">
+                        <spring:message code="label.characterizedgroup" var="label_characterizedgroup"/>
+                        <spring:message arguments="${label_characterizedgroup}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_characterizedgroup_menu_item">
+                    <spring:url value="/characterizedgroup?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_characterizedgroup_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_characterizedgroup_menu_item_url}">
+                        <spring:message code="label.characterizedgroups" var="label_characterizedgroups"/>
+                        <spring:message arguments="${label_characterizedgroups}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_resourcetype_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_resourcetype_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_resourcetype_menu_item">
+                    <spring:url value="/resourcetype/form" var="web_mvc_jsp_create_resourcetype_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_resourcetype_menu_item_url}">
+                        <spring:message code="label.resourcetype" var="label_resourcetype"/>
+                        <spring:message arguments="${label_resourcetype}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_resourcetype_menu_item">
+                    <spring:url value="/resourcetype?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_resourcetype_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_resourcetype_menu_item_url}">
+                        <spring:message code="label.resourcetypes" var="label_resourcetypes"/>
+                        <spring:message arguments="${label_resourcetypes}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_operationtranslation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_operationtranslation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_operationtranslation_menu_item">
+                    <spring:url value="/operationtranslation/form" var="web_mvc_jsp_create_operationtranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_operationtranslation_menu_item_url}">
+                        <spring:message code="label.operationtranslation" var="label_operationtranslation"/>
+                        <spring:message arguments="${label_operationtranslation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_operationtranslation_menu_item">
+                    <spring:url value="/operationtranslation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_operationtranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_operationtranslation_menu_item_url}">
+                        <spring:message code="label.operationtranslations" var="label_operationtranslations"/>
+                        <spring:message arguments="${label_operationtranslations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_resourcetranslation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_resourcetranslation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_resourcetranslation_menu_item">
+                    <spring:url value="/resourcetranslation/form" var="web_mvc_jsp_create_resourcetranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_resourcetranslation_menu_item_url}">
+                        <spring:message code="label.resourcetranslation" var="label_resourcetranslation"/>
+                        <spring:message arguments="${label_resourcetranslation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_resourcetranslation_menu_item">
+                    <spring:url value="/resourcetranslation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_resourcetranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_resourcetranslation_menu_item_url}">
+                        <spring:message code="label.resourcetranslations" var="label_resourcetranslations"/>
+                        <spring:message arguments="${label_resourcetranslations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_characteristictranslation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_characteristictranslation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_characteristictranslation_menu_item">
+                    <spring:url value="/characteristictranslation/form" var="web_mvc_jsp_create_characteristictranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_characteristictranslation_menu_item_url}">
+                        <spring:message code="label.characteristictranslation" var="label_characteristictranslation"/>
+                        <spring:message arguments="${label_characteristictranslation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_characteristictranslation_menu_item">
+                    <spring:url value="/characteristictranslation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_characteristictranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_characteristictranslation_menu_item_url}">
+                        <spring:message code="label.characteristictranslations" var="label_characteristictranslations"/>
+                        <spring:message arguments="${label_characteristictranslations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_applicationaccount_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_applicationaccount_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_applicationaccount_menu_item">
+                    <spring:url value="/applicationaccount/form" var="web_mvc_jsp_create_applicationaccount_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_applicationaccount_menu_item_url}">
+                        <spring:message code="label.applicationaccount" var="label_applicationaccount"/>
+                        <spring:message arguments="${label_applicationaccount}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_applicationaccount_menu_item">
+                    <spring:url value="/applicationaccount?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_applicationaccount_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_applicationaccount_menu_item_url}">
+                        <spring:message code="label.applicationaccounts" var="label_applicationaccounts"/>
+                        <spring:message arguments="${label_applicationaccounts}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_resource_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_resource_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_resource_menu_item">
+                    <spring:url value="/resource/form" var="web_mvc_jsp_create_resource_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_resource_menu_item_url}">
+                        <spring:message code="label.resource" var="label_resource"/>
+                        <spring:message arguments="${label_resource}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_resource_menu_item">
+                    <spring:url value="/resource?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_resource_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_resource_menu_item_url}">
+                        <spring:message code="label.resources" var="label_resources"/>
+                        <spring:message arguments="${label_resources}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_commonroleassignedpermission_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_commonroleassignedpermission_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_commonroleassignedpermission_menu_item">
+                    <spring:url value="/commonroleassignedpermission/form" var="web_mvc_jsp_create_commonroleassignedpermission_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_commonroleassignedpermission_menu_item_url}">
+                        <spring:message code="label.commonroleassignedpermission" var="label_commonroleassignedpermission"/>
+                        <spring:message arguments="${label_commonroleassignedpermission}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_commonroleassignedpermission_menu_item">
+                    <spring:url value="/commonroleassignedpermission?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_commonroleassignedpermission_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_commonroleassignedpermission_menu_item_url}">
+                        <spring:message code="label.commonroleassignedpermissions" var="label_commonroleassignedpermissions"/>
+                        <spring:message arguments="${label_commonroleassignedpermissions}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_userassignedcommonrolecontextualization_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_userassignedcommonrolecontextualization_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_userassignedcommonrolecontextualization_menu_item">
+                    <spring:url value="/userassignedcommonrolecontextualization/form" var="web_mvc_jsp_create_userassignedcommonrolecontextualization_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_userassignedcommonrolecontextualization_menu_item_url}">
+                        <spring:message code="label.userassignedcommonrolecontextualization" var="label_userassignedcommonrolecontextualization"/>
+                        <spring:message arguments="${label_userassignedcommonrolecontextualization}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_userassignedcommonrolecontextualization_menu_item">
+                    <spring:url value="/userassignedcommonrolecontextualization?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_userassignedcommonrolecontextualization_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_userassignedcommonrolecontextualization_menu_item_url}">
+                        <spring:message code="label.userassignedcommonrolecontextualizations" var="label_userassignedcommonrolecontextualizations"/>
+                        <spring:message arguments="${label_userassignedcommonrolecontextualizations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_userassignedadministrativerole_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_userassignedadministrativerole_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_userassignedadministrativerole_menu_item">
+                    <spring:url value="/userassignedadministrativerole/form" var="web_mvc_jsp_create_userassignedadministrativerole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_userassignedadministrativerole_menu_item_url}">
+                        <spring:message code="label.userassignedadministrativerole" var="label_userassignedadministrativerole"/>
+                        <spring:message arguments="${label_userassignedadministrativerole}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_userassignedadministrativerole_menu_item">
+                    <spring:url value="/userassignedadministrativerole?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_userassignedadministrativerole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_userassignedadministrativerole_menu_item_url}">
+                        <spring:message code="label.userassignedadministrativeroles" var="label_userassignedadministrativeroles"/>
+                        <spring:message arguments="${label_userassignedadministrativeroles}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_permissionconflict_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_permissionconflict_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_permissionconflict_menu_item">
+                    <spring:url value="/permissionconflict/form" var="web_mvc_jsp_create_permissionconflict_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_permissionconflict_menu_item_url}">
+                        <spring:message code="label.permissionconflict" var="label_permissionconflict"/>
+                        <spring:message arguments="${label_permissionconflict}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_permissionconflict_menu_item">
+                    <spring:url value="/permissionconflict?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_permissionconflict_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_permissionconflict_menu_item_url}">
+                        <spring:message code="label.permissionconflicts" var="label_permissionconflicts"/>
+                        <spring:message arguments="${label_permissionconflicts}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_supportedlocale_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_supportedlocale_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_supportedlocale_menu_item">
+                    <spring:url value="/supportedlocale/form" var="web_mvc_jsp_create_supportedlocale_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_supportedlocale_menu_item_url}">
+                        <spring:message code="label.supportedlocale" var="label_supportedlocale"/>
+                        <spring:message arguments="${label_supportedlocale}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_supportedlocale_menu_item">
+                    <spring:url value="/supportedlocale?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_supportedlocale_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_supportedlocale_menu_item_url}">
+                        <spring:message code="label.supportedlocales" var="label_supportedlocales"/>
+                        <spring:message arguments="${label_supportedlocales}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_permissionconflicttranslation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_permissionconflicttranslation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_permissionconflicttranslation_menu_item">
+                    <spring:url value="/permissionconflicttranslation/form" var="web_mvc_jsp_create_permissionconflicttranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_permissionconflicttranslation_menu_item_url}">
+                        <spring:message code="label.permissionconflicttranslation" var="label_permissionconflicttranslation"/>
+                        <spring:message arguments="${label_permissionconflicttranslation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_permissionconflicttranslation_menu_item">
+                    <spring:url value="/permissionconflicttranslation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_permissionconflicttranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_permissionconflicttranslation_menu_item_url}">
+                        <spring:message code="label.permissionconflicttranslations" var="label_permissionconflicttranslations"/>
+                        <spring:message arguments="${label_permissionconflicttranslations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_usermanualgroupmembership_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_usermanualgroupmembership_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_usermanualgroupmembership_menu_item">
+                    <spring:url value="/usermanualgroupmembership/form" var="web_mvc_jsp_create_usermanualgroupmembership_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_usermanualgroupmembership_menu_item_url}">
+                        <spring:message code="label.usermanualgroupmembership" var="label_usermanualgroupmembership"/>
+                        <spring:message arguments="${label_usermanualgroupmembership}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_usermanualgroupmembership_menu_item">
+                    <spring:url value="/usermanualgroupmembership?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_usermanualgroupmembership_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_usermanualgroupmembership_menu_item_url}">
+                        <spring:message code="label.usermanualgroupmemberships" var="label_usermanualgroupmemberships"/>
+                        <spring:message arguments="${label_usermanualgroupmemberships}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_usercharacteristicvalue_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_usercharacteristicvalue_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_usercharacteristicvalue_menu_item">
+                    <spring:url value="/usercharacteristicvalue/form" var="web_mvc_jsp_create_usercharacteristicvalue_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_usercharacteristicvalue_menu_item_url}">
+                        <spring:message code="label.usercharacteristicvalue" var="label_usercharacteristicvalue"/>
+                        <spring:message arguments="${label_usercharacteristicvalue}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_usercharacteristicvalue_menu_item">
+                    <spring:url value="/usercharacteristicvalue?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_usercharacteristicvalue_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_usercharacteristicvalue_menu_item_url}">
+                        <spring:message code="label.usercharacteristicvalues" var="label_usercharacteristicvalues"/>
+                        <spring:message arguments="${label_usercharacteristicvalues}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_inactivationtranslation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_inactivationtranslation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_inactivationtranslation_menu_item">
+                    <spring:url value="/inactivationtranslation/form" var="web_mvc_jsp_create_inactivationtranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_inactivationtranslation_menu_item_url}">
+                        <spring:message code="label.inactivationtranslation" var="label_inactivationtranslation"/>
+                        <spring:message arguments="${label_inactivationtranslation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_inactivationtranslation_menu_item">
+                    <spring:url value="/inactivationtranslation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_inactivationtranslation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_inactivationtranslation_menu_item_url}">
+                        <spring:message code="label.inactivationtranslations" var="label_inactivationtranslations"/>
+                        <spring:message arguments="${label_inactivationtranslations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_userinactivation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_userinactivation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_userinactivation_menu_item">
+                    <spring:url value="/userinactivation/form" var="web_mvc_jsp_create_userinactivation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_userinactivation_menu_item_url}">
+                        <spring:message code="label.userinactivation" var="label_userinactivation"/>
+                        <spring:message arguments="${label_userinactivation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_userinactivation_menu_item">
+                    <spring:url value="/userinactivation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_userinactivation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_userinactivation_menu_item_url}">
+                        <spring:message code="label.userinactivations" var="label_userinactivations"/>
+                        <spring:message arguments="${label_userinactivations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_inactivation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_inactivation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_inactivation_menu_item">
+                    <spring:url value="/inactivation/form" var="web_mvc_jsp_create_inactivation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_inactivation_menu_item_url}">
+                        <spring:message code="label.inactivation" var="label_inactivation"/>
+                        <spring:message arguments="${label_inactivation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_inactivation_menu_item">
+                    <spring:url value="/inactivation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_inactivation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_inactivation_menu_item_url}">
+                        <spring:message code="label.inactivations" var="label_inactivations"/>
+                        <spring:message arguments="${label_inactivations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_permissioncontext_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_permissioncontext_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_permissioncontext_menu_item">
+                    <spring:url value="/permissioncontext/form" var="web_mvc_jsp_create_permissioncontext_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_permissioncontext_menu_item_url}">
+                        <spring:message code="label.permissioncontext" var="label_permissioncontext"/>
+                        <spring:message arguments="${label_permissioncontext}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_permissioncontext_menu_item">
+                    <spring:url value="/permissioncontext?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_permissioncontext_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_permissioncontext_menu_item_url}">
+                        <spring:message code="label.permissioncontexts" var="label_permissioncontexts"/>
+                        <spring:message arguments="${label_permissioncontexts}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_characterizedgroupinactivation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_characterizedgroupinactivation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_characterizedgroupinactivation_menu_item">
+                    <spring:url value="/characterizedgroupinactivation/form" var="web_mvc_jsp_create_characterizedgroupinactivation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_characterizedgroupinactivation_menu_item_url}">
+                        <spring:message code="label.characterizedgroupinactivation" var="label_characterizedgroupinactivation"/>
+                        <spring:message arguments="${label_characterizedgroupinactivation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_characterizedgroupinactivation_menu_item">
+                    <spring:url value="/characterizedgroupinactivation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_characterizedgroupinactivation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_characterizedgroupinactivation_menu_item_url}">
+                        <spring:message code="label.characterizedgroupinactivations" var="label_characterizedgroupinactivations"/>
+                        <spring:message arguments="${label_characterizedgroupinactivations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_manualgroupinactivation_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_manualgroupinactivation_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_manualgroupinactivation_menu_item">
+                    <spring:url value="/manualgroupinactivation/form" var="web_mvc_jsp_create_manualgroupinactivation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_manualgroupinactivation_menu_item_url}">
+                        <spring:message code="label.manualgroupinactivation" var="label_manualgroupinactivation"/>
+                        <spring:message arguments="${label_manualgroupinactivation}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_manualgroupinactivation_menu_item">
+                    <spring:url value="/manualgroupinactivation?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_manualgroupinactivation_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_manualgroupinactivation_menu_item_url}">
+                        <spring:message code="label.manualgroupinactivations" var="label_manualgroupinactivations"/>
+                        <spring:message arguments="${label_manualgroupinactivations}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_manualgroupassignedcommonrole_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_manualgroupassignedcommonrole_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_manualgroupassignedcommonrole_menu_item">
+                    <spring:url value="/manualgroupassignedcommonrole/form" var="web_mvc_jsp_create_manualgroupassignedcommonrole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_manualgroupassignedcommonrole_menu_item_url}">
+                        <spring:message code="label.manualgroupassignedcommonrole" var="label_manualgroupassignedcommonrole"/>
+                        <spring:message arguments="${label_manualgroupassignedcommonrole}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_manualgroupassignedcommonrole_menu_item">
+                    <spring:url value="/manualgroupassignedcommonrole?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_manualgroupassignedcommonrole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_manualgroupassignedcommonrole_menu_item_url}">
+                        <spring:message code="label.manualgroupassignedcommonroles" var="label_manualgroupassignedcommonroles"/>
+                        <spring:message arguments="${label_manualgroupassignedcommonroles}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_manualgroupassignedadministrativerole_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_manualgroupassignedadministrativerole_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_manualgroupassignedadministrativerole_menu_item">
+                    <spring:url value="/manualgroupassignedadministrativerole/form" var="web_mvc_jsp_create_manualgroupassignedadministrativerole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_manualgroupassignedadministrativerole_menu_item_url}">
+                        <spring:message code="label.manualgroupassignedadministrativerole" var="label_manualgroupassignedadministrativerole"/>
+                        <spring:message arguments="${label_manualgroupassignedadministrativerole}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_manualgroupassignedadministrativerole_menu_item">
+                    <spring:url value="/manualgroupassignedadministrativerole?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_manualgroupassignedadministrativerole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_manualgroupassignedadministrativerole_menu_item_url}">
+                        <spring:message code="label.manualgroupassignedadministrativeroles" var="label_manualgroupassignedadministrativeroles"/>
+                        <spring:message arguments="${label_manualgroupassignedadministrativeroles}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_characterizedgroupcharacteristicvalue_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_characterizedgroupcharacteristicvalue_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_characterizedgroupcharacteristicvalue_menu_item">
+                    <spring:url value="/characterizedgroupcharacteristicvalue/form" var="web_mvc_jsp_create_characterizedgroupcharacteristicvalue_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_characterizedgroupcharacteristicvalue_menu_item_url}">
+                        <spring:message code="label.characterizedgroupcharacteristicvalue" var="label_characterizedgroupcharacteristicvalue"/>
+                        <spring:message arguments="${label_characterizedgroupcharacteristicvalue}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_characterizedgroupcharacteristicvalue_menu_item">
+                    <spring:url value="/characterizedgroupcharacteristicvalue?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_characterizedgroupcharacteristicvalue_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_characterizedgroupcharacteristicvalue_menu_item_url}">
+                        <spring:message code="label.characterizedgroupcharacteristicvalues" var="label_characterizedgroupcharacteristicvalues"/>
+                        <spring:message arguments="${label_characterizedgroupcharacteristicvalues}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_characterizedgroupassignedcommonrole_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_characterizedgroupassignedcommonrole_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_characterizedgroupassignedcommonrole_menu_item">
+                    <spring:url value="/characterizedgroupassignedcommonrole/form" var="web_mvc_jsp_create_characterizedgroupassignedcommonrole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_characterizedgroupassignedcommonrole_menu_item_url}">
+                        <spring:message code="label.characterizedgroupassignedcommonrole" var="label_characterizedgroupassignedcommonrole"/>
+                        <spring:message arguments="${label_characterizedgroupassignedcommonrole}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_characterizedgroupassignedcommonrole_menu_item">
+                    <spring:url value="/characterizedgroupassignedcommonrole?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_characterizedgroupassignedcommonrole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_characterizedgroupassignedcommonrole_menu_item_url}">
+                        <spring:message code="label.characterizedgroupassignedcommonroles" var="label_characterizedgroupassignedcommonroles"/>
+                        <spring:message arguments="${label_characterizedgroupassignedcommonroles}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_characterizedgroupassignedadministrativerole_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_characterizedgroupassignedadministrativerole_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_characterizedgroupassignedadministrativerole_menu_item">
+                    <spring:url value="/characterizedgroupassignedadministrativerole/form" var="web_mvc_jsp_create_characterizedgroupassignedadministrativerole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_characterizedgroupassignedadministrativerole_menu_item_url}">
+                        <spring:message code="label.characterizedgroupassignedadministrativerole" var="label_characterizedgroupassignedadministrativerole"/>
+                        <spring:message arguments="${label_characterizedgroupassignedadministrativerole}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_characterizedgroupassignedadministrativerole_menu_item">
+                    <spring:url value="/characterizedgroupassignedadministrativerole?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_characterizedgroupassignedadministrativerole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_characterizedgroupassignedadministrativerole_menu_item_url}">
+                        <spring:message code="label.characterizedgroupassignedadministrativeroles" var="label_characterizedgroupassignedadministrativeroles"/>
+                        <spring:message arguments="${label_characterizedgroupassignedadministrativeroles}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_userassignedsecurityadministrativerole_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_userassignedsecurityadministrativerole_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_userassignedsecurityadministrativerole_menu_item">
+                    <spring:url value="/userassignedsecurityadministrativerole/form" var="web_mvc_jsp_create_userassignedsecurityadministrativerole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_userassignedsecurityadministrativerole_menu_item_url}">
+                        <spring:message code="label.userassignedsecurityadministrativerole" var="label_userassignedsecurityadministrativerole"/>
+                        <spring:message arguments="${label_userassignedsecurityadministrativerole}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_userassignedsecurityadministrativerole_menu_item">
+                    <spring:url value="/userassignedsecurityadministrativerole?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_userassignedsecurityadministrativerole_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_userassignedsecurityadministrativerole_menu_item_url}">
+                        <spring:message code="label.userassignedsecurityadministrativeroles" var="label_userassignedsecurityadministrativeroles"/>
+                        <spring:message arguments="${label_userassignedsecurityadministrativeroles}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

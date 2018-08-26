@@ -1,0 +1,28 @@
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" xmlns:form="http://www.springframework.org/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <script type="text/javascript">dojo.require('dijit.TitlePane');</script>
+    <div id="_title_div">
+        <spring:message code="label.characterizedgroupcharacteristicvalue" var="entity_label"/>
+        <spring:message arguments="${entity_label}" code="entity.show" var="title_msg"/>
+        <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_title_div', widgetType : 'dijit.TitlePane', widgetAttrs : {title: '${title_msg}'}})); </script>
+        <c:if test="${not empty characterizedGroupCharacteristicValue}">
+            <div id="roo_characterizedGroupCharacteristicValue_characterizedGroup">
+                <label for="_characterizedGroup_id">Characterized Group:</label>
+                <div class="box" id="_characterizedGroup_id">
+                    <c:out value="${characterizedGroupCharacteristicValue.characterizedGroup}"/>
+                </div>
+            </div>
+            <br/>
+            <div id="roo_characterizedGroupCharacteristicValue_characteristicValue">
+                <label for="_characteristicValue_id">Characteristic Value:</label>
+                <div class="box" id="_characteristicValue_id">
+                    <c:out value="${characterizedGroupCharacteristicValue.characteristicValue}"/>
+                </div>
+            </div>
+            <br/>
+        </c:if>
+        <c:if test="${empty characterizedGroupCharacteristicValue}">
+            <spring:message arguments="${entity_label}" code="entity.not.found.single"/>
+        </c:if>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:form="http://www.springframework.org/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <script type="text/javascript">dojo.require('dijit.TitlePane');dojo.require('dijit.form.FilteringSelect');</script>
+    <div id="_title_div">
+        <spring:message code="label.userassignedadministrativerole" var="entity_label"/>
+        <spring:message arguments="${entity_label}" code="entity.update" var="title_msg"/>
+        <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_title_div', widgetType : 'dijit.TitlePane', widgetAttrs : {title: '${title_msg}'}})); </script>
+        <spring:url value="/userassignedadministrativerole/${userAssignedAdministrativeRole.uid}" var="form_url"/>
+        <form:form action="${form_url}" method="PUT" modelAttribute="userAssignedAdministrativeRole">
+            <form:errors cssClass="errors" delimiter="&lt;p/&gt;"/>
+            <div id="roo_userAssignedAdministrativeRole_user">
+                <c:if test="${not empty users}">
+                    <label for="_user_id">User:</label>
+                    <form:select cssStyle="width:250px" id="_user_id" path="user">
+                        <form:options itemValue="uid" items="${users}"/>
+                    </form:select>
+                    <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_user_id', widgetType: 'dijit.form.FilteringSelect', widgetAttrs : {hasDownArrow : true}})); </script>
+                </c:if>
+            </div>
+            <br/>
+            <div id="roo_userAssignedAdministrativeRole_administrativeRole">
+                <c:if test="${not empty administrativeroles}">
+                    <label for="_administrativeRole_id">Administrative Role:</label>
+                    <form:select cssStyle="width:250px" id="_administrativeRole_id" path="administrativeRole">
+                        <form:options itemValue="uid" items="${administrativeroles}"/>
+                    </form:select>
+                    <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_administrativeRole_id', widgetType: 'dijit.form.FilteringSelect', widgetAttrs : {hasDownArrow : true}})); </script>
+                </c:if>
+            </div>
+            <br/>
+            <div id="roo_userAssignedAdministrativeRole_validity">
+                <c:if test="${not empty validitys}">
+                    <label for="_validity_id">Validity:</label>
+                    <form:select cssStyle="width:250px" id="_validity_id" path="validity">
+                        <form:options itemValue="uid" items="${validitys}"/>
+                    </form:select>
+                    <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_validity_id', widgetType: 'dijit.form.FilteringSelect', widgetAttrs : {hasDownArrow : true}})); </script>
+                </c:if>
+            </div>
+            <br/>
+            <div class="submit" id="roo_userAssignedAdministrativeRole_submit">
+                <spring:message code="button.update" var="update_button"/>
+                <script type="text/javascript">Spring.addDecoration(new Spring.ValidateAllDecoration({elementId:'proceed', event:'onclick'}));</script>
+                <input id="proceed" type="submit" value="${update_button}"/>
+            </div>
+            <form:hidden id="_uid_id" path="uid"/>
+            <form:hidden id="_version_id" path="version"/>
+        </form:form>
+    </div>
+</div>

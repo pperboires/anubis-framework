@@ -1,0 +1,50 @@
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:form="http://www.springframework.org/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <script type="text/javascript">dojo.require('dijit.TitlePane');dojo.require('dijit.form.FilteringSelect');</script>
+    <div id="_title_div">
+        <spring:message code="label.userassignedcommonrolecontextualization" var="entity_label"/>
+        <spring:message arguments="${entity_label}" code="entity.update" var="title_msg"/>
+        <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_title_div', widgetType : 'dijit.TitlePane', widgetAttrs : {title: '${title_msg}'}})); </script>
+        <spring:url value="/userassignedcommonrolecontextualization/${userAssignedCommonRoleContextualization.uid}" var="form_url"/>
+        <form:form action="${form_url}" method="PUT" modelAttribute="userAssignedCommonRoleContextualization">
+            <form:errors cssClass="errors" delimiter="&lt;p/&gt;"/>
+            <div id="roo_userAssignedCommonRoleContextualization_userAssignedCommonRole">
+                <c:if test="${not empty userassignedcommonroles}">
+                    <label for="_userAssignedCommonRole_id">User Assigned Common Role:</label>
+                    <form:select cssStyle="width:250px" id="_userAssignedCommonRole_id" path="userAssignedCommonRole">
+                        <form:options itemValue="uid" items="${userassignedcommonroles}"/>
+                    </form:select>
+                    <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_userAssignedCommonRole_id', widgetType: 'dijit.form.FilteringSelect', widgetAttrs : {hasDownArrow : true}})); </script>
+                </c:if>
+            </div>
+            <br/>
+            <div id="roo_userAssignedCommonRoleContextualization_contextValue">
+                <c:if test="${not empty contextvalues}">
+                    <label for="_contextValue_id">Context Value:</label>
+                    <form:select cssStyle="width:250px" id="_contextValue_id" path="contextValue">
+                        <form:options itemValue="uid" items="${contextvalues}"/>
+                    </form:select>
+                    <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_contextValue_id', widgetType: 'dijit.form.FilteringSelect', widgetAttrs : {hasDownArrow : true}})); </script>
+                </c:if>
+            </div>
+            <br/>
+            <div id="roo_userAssignedCommonRoleContextualization_commonRoleAssignedPermission">
+                <c:if test="${not empty commonroleassignedpermissions}">
+                    <label for="_commonRoleAssignedPermission_id">Common Role Assigned Permission:</label>
+                    <form:select cssStyle="width:250px" id="_commonRoleAssignedPermission_id" path="commonRoleAssignedPermission">
+                        <form:options itemValue="uid" items="${commonroleassignedpermissions}"/>
+                    </form:select>
+                    <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_commonRoleAssignedPermission_id', widgetType: 'dijit.form.FilteringSelect', widgetAttrs : {hasDownArrow : true}})); </script>
+                </c:if>
+            </div>
+            <br/>
+            <div class="submit" id="roo_userAssignedCommonRoleContextualization_submit">
+                <spring:message code="button.update" var="update_button"/>
+                <script type="text/javascript">Spring.addDecoration(new Spring.ValidateAllDecoration({elementId:'proceed', event:'onclick'}));</script>
+                <input id="proceed" type="submit" value="${update_button}"/>
+            </div>
+            <form:hidden id="_uid_id" path="uid"/>
+            <form:hidden id="_version_id" path="version"/>
+        </form:form>
+    </div>
+</div>

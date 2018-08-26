@@ -1,0 +1,397 @@
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-10 15:56:49
+project --topLevelPackage net.sourceforge.anubis
+hint
+persistence setup --provider HIBERNATE --database POSTGRES 
+hint
+entity --class ~.domain.Validity --testAutomatically 
+field number --fieldName uid --type java.lang.Long --column uid --notNull 
+hint
+hint fields
+// [failed] field date --type java.util.Date --fieldName begin --column begin_date 
+// [failed] field date --type java.util.Date --fieldName start --column start
+field date --type java.util.Date --fieldName begin_date --column begin_date
+field date --type java.util.Date --fieldName end_date --column end_date
+entity --class ApplicationAccount --testAutomatically --table application_account --identifierField uid --identifierColumn uid ---identifierType java.lang.Long
+field string --fieldName password --column password --notNull true
+field boolean --fieldName enabled --column enabled --notNull true
+entity --class Application --testAutomatically --identifierColumn uid --identifierField uid --identifierType java.ang.Long --table application
+field string --fieldName id --column id --notNull true
+field string --fieldName name --column name --notNull true
+// [failed] field reference --type net.sourceforge.anubis.domain.ApplicationAccount --fieldName account --notNull  true --cardinality 1 --fetch EAGER --joinColumnName application_account_uid
+// [failed] field reference --type net.sourceforge.anubis.domain.ApplicationAccount --fieldName account --notNull  true --cardinality 1 --fetch EAGER --joinColumnName application_account_uid
+// [failed] field reference --type net.sourceforge.anubis.domain.ApplicationAccount --fieldName account --notNull  true --cardinality 1 --fetch EAGER --joinColumnName application_account_uid
+field reference --fieldName account --type net.sourceforge.anubis.domain.ApplicationAccount --notNull true --joinColumnName application_account
+hint
+perform tests
+finder list --class net.sourceforge.anubis.domain.Application
+help
+perform eclipse
+metadata for type --type net.sourceforge.anubis.domain.Application
+controller all --package ~.web
+perform eclipse
+database properties list
+database properties list
+database properties set --key database.password --value anubis
+database properties set --key database.username --value anubis
+database properties set --key database.url --value jdbc:postgressql://localhost:5432/anubis
+database properties list
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-10 16:38:25
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-10 16:44:46
+database properties list
+database properties set --key database.url --value jdbc:postgresql://localhost:5432/anubis
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-10 16:45:25
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-10 16:46:10
+persistence setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-10 16:46:34
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-10 16:56:33
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-10 16:57:45
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-10 16:58:53
+entity --class net.sourceforge.anubis.domain.Locale --testAutomatically --identifierColumn uid --identifierField uid --identifierType java.lang.Long --table locale
+field string --fieldName code --column code --notNull
+field string --fieldName name --notNull --column name
+// [failed] entity --class net.sourceforge.anubis.domain.Role --testAutomatically --table role --identifierColumn uid --identifierField uid
+// [failed] entity --class net.sourceforge.anubis.domain.Role --testAutomatically --table role --identifierColumn uid --identifierField uid
+entity --class net.sourceforge.anubis.domain.Role --testAutomatically --table role --identifierColumn uid --identifierField uid --permitReservedWords 
+field string  --fieldName id --column id --notNull 
+field boolean --fieldName enabled --column  enabled --notNull 
+field reference --fieldName application --type net.sourceforge.anubis.domain.Application --cardinality MANY_TO_ONE --notNull --joinColumnName application --fetch EAGER
+entity --class net.sourceforge.anubis.domain.RoleTranslation --testAutomatically --table role_translation --identifierColumn uid --identifierField uid
+// [failed] field reference --fieldName role --type net.sourceforge.anubis.domain.Role --notNull true --joinColumnName role --fetch EAGER --cardinality MANY_TO_ONE 
+field reference --fieldName role --type net.sourceforge.anubis.domain.Role --notNull true --joinColumnName role --fetch EAGER --cardinality MANY_TO_ONE --permitReservedWords 
+field reference --fieldName locale --type net.sourceforge.anubis.domain.Locale --cardinality MANY_TO_ONE --notNull --joinColumnName locale
+field string --fieldName name --notNull --column name 
+field string --fieldName description --notNull false --column description
+controller all --package ~.web
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-10 17:13:21
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-10 17:14:53
+// [failed] entity --class net.sourceforge.anubis.domain.Role
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-10 17:16:30
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-10 17:16:50
+selenium test --controller ~.web.ValidityController
+entity --class ~.domain.ResourceType --table resource_type --testAutomatically --identifierField uid --ident-identifierType java.lang.Long
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-10 17:22:39
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-10 17:22:46
+// [failed] entity --class ~.domain.ResourceType
+field string --fieldName id --column id --notNull 
+entity --class ~.domain.ResourceTypeTranslation --table resource_type_translation --testAutomatically --identifierColumn uid --identifierField uid
+field string --fieldName name --notNull --column name
+field string --fieldName description --notNull false --column description
+field reference --fieldName locale --type ~.domain.Locale --joinColumnName locale --cardinality MANY_TO_ONE
+// [failed] entity --class ~.domain.ResourceType
+field set --fieldName translations --element ~.domain.ResourceTypeTranslation --cardinality ONE_TO_MANY --mappedBy resource
+// [failed] entity --class ~.domain.ResourceTypeTranslation
+field reference --fieldName resourceType --type ~.domain.ResourceType --cardinality MANY_TO_ONE --joinColumnName resource_type
+controller all --package ~.web
+// [failed] selenium test --controller ~.web
+// [failed] selenium test --controller ~.domain.ResourceType
+selenium test --controller ~.web.ResourceTypeController
+selenium test --controller ~.web.ResourceTypeTranslationController
+entity --class ~.domain.Resource --table resource --identifierField uid --testAutomatically --identifierColumn uid
+field string --fieldName id --column id
+field boolean --fieldName enabled --column enabled
+field reference --fieldName application --type ~.domain.Application --joinColumnName application --cardinality MANY_TO_ONE 
+entity --class ~.domain.ResourceTranslation --table resource_translation --identifierColumn uid --identifierField uid --testAutomatically
+field string --fieldName name --column name
+field string --fieldName description --column description --notNull  false
+field reference --fieldName resource --type ~.domain.Resource --joinColumnName resource --cardinality MANY_TO_ONE 
+// [failed] entity --class ~.domain.Resource
+field set --fieldName translations --element ~.domain.ResourceTranslation --cardinality ONE_TO_MANY --mappedBy resour
+controller all --package ~.web
+// [failed] entity --class ~.domain.Resource
+field reference --fieldName type --type ~.domain.ResourceType --cardinality MANY_TO_ONE --joinColumnName type
+controller all --package ~.web
+controller all --package ~.web
+backup
+controller all --package ~.web
+controller all --package ~.web
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-10 17:52:15
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-10 17:52:17
+entity --class ~.domain.Operation --table operation --identifierField uid --identifierColumn uid --testAutomatically 
+field string --fieldName id --column id
+field reference --fieldName application --type ~.domain.Application --cardinality MANY_TO_ONE --notNull false --joinColumnName application
+entity --class ~.domain.OperationTranslation --table operation_translation --testAutomatically --identifierColumn uid --identifierField uid 
+field string --fieldName name --column name 
+field string --fieldName description --column description --notNull false 
+field reference --fieldName operation --type ~.domain.Operation --joinColumnName operation --cardinality MANY_TO_ONE  
+// [failed] entity --class ~.domain.Operation
+field set --fieldName translations --element ~.domain.OperationTranslation --cardinality ONE_TO_MANY --mappedBy operation
+entity --class ~.domain.Permission --table permission --testAutomatically --identifierColumn uid --identifierField uid
+field boolean --fieldName enabled --column enabled
+field boolean --fieldName contextualized --column contextualized 
+field boolean --fieldName audited --column audited
+// [failed] field reference --fieldName resource --type ~.domain.Resource --cardinality MANY_TO_ON --joinColumnName resource 
+field reference --fieldName operation --type  ~.domain.Operation --cardinality MANY_TO_ONE --joinColumnName operation
+field reference --fieldName resource --type ~.domain.Resource --cardinality MANY_TO_ONE --joinColumnName resource 
+// [failed] field reference --fieldName resource --type ~.d
+controller all --package ~.web
+backup
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-11 10:38:09
+// [failed] entity --class ~.domain.Role
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-11 10:49:44
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-11 10:49:48
+controller all --package ~.web
+controller all --package ~.web
+controller all --package ~.web
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-11 11:05:14
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-11 11:05:18
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-11 11:57:24
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-11 11:57:29
+// [failed] entity --class ~.domain.User --identifierColumn uid --identifierField uid --testAutomatically --table use
+entity --class ~.domain.User --identifierColumn uid --identifierField uid --testAutomatically --table user --permitReservedWords 
+field string --fieldName name --column name
+entity --class ~.domain.UserAccount --identifierColumn uid --identifierField uid --table user_account --testAutomatically
+field string --fieldName login --column login
+field string --fieldName password --column password
+field boolean --fieldName enabled --column enabled
+// [failed] entity --class ~.domain.User
+field reference --fieldName account --type ~.domain.UserAccount --joinColumnName user_account --notNull true
+field reference --fieldName preferredLocale --type ~.domain.Locale --cardinality MANY_TO_ONE --joinColumnNamreferred_locale
+// [failed] entity --class ~.domain.Group --table group --testAutomatically --identifierColumn uid --identifierField uid --abstract
+// [failed] entity --class ~.domain.Group --table group --testAutomatically --identifierColumn uid --identifierField uid --abstract --permitReservedWords 
+entity --class ~.domain.Group --table group --identifierColumn uid --identifierField uid --abstract --permitReservedWords 
+field string --fieldName id --column id
+field boolean --fieldName enabled --column enabled
+entity --class ~.domain.GroupTranslation --table group_translation --identifierColumn uid --identifierField uid --testAutomatically 
+field string --fieldName name --column name
+field string --fieldName description --column description --notNull false
+// [failed] field reference --fieldName group --type ~.domain.Group --cardinality MANY_TO_ONE --joinColumnName group --notNull true
+field reference --fieldName group --type ~.domain.Group --cardinality MANY_TO_ONE --joinColumnName group --notNull true --permitReservedWords 
+// [failed] entity --class ~.domain.Group
+field set --fieldName translations --element ~.domain.GroupTranslation --cardinality ONE_TO_MANY --notNull true
+entity --class ~.domain.CharacterizedGroup --extends ~.domain.Group --table characterized_group --testAutomatically --identifierColumn uid --identifierField uid --inheritanceType TABLE_PER_CLASS 
+controller all --package ~.web
+// [failed] entity --class ~.domain.Group
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-11 12:39:55
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-12 20:59:04
+backup
+controller all --package ~.web
+controller all --package ~.web
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-12 21:19:17
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-12 21:19:20
+controller all --package ~.we
+controller all --package ~.web
+controller all --package ~.web
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-12 21:24:50
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-12 21:24:54
+// [failed] entity --class ~.domain.Group --abstract --inheritanceType SINGLE_TABLE --identifierColumn uid --identifierField uid
+entity --class ~.domain.Group --abstract --inheritanceType SINGLE_TABLE --identifierColumn uid --identifierField uid --permitReservedWords 
+field string --fieldName id --column id 
+entity --class ~.domain.ManualGroup --extends ~.domain.Group --table manual_group --testAutomatically --inheritanceType SINGLE_TABLE 
+field set --fieldName members --element ~.domain.User --cardinality ONE_TO_MANY --notNull false
+controller all --package ~.web
+entity --class ~.domain.CharacterizedGroup --table characterized_group --extends ~.domain.Group --inheritanceType SINGLE_TABLE --testAutomatically true
+controller all --package ~.web
+entity --class ~.domain.GroupTranslation --table group_translation --identifierField uid --identifierColumn uid --testAutomatically true
+field string --fieldName name --column name
+field string --fieldName description --column description --notNull false
+field reference --type ~.domain.Locale --fieldName locale --cardinality MANY_TO_ONE --joinColumnName locale --notNull true
+// [failed] field reference --type ~.domain.Group --fieldName group --cardinality MANY_TO_ONE --joinColumnName group --notNull true 
+field reference --type ~.domain.Group --fieldName group --cardinality MANY_TO_ONE --joinColumnName group --notNull true --permitReservedWords 
+// [failed] entity --class ~.domain.Group
+field set --fieldName translations --element ~.domain.GroupTranslation --cardinality ONE_TO_MANY --mappedBy group
+controller all --package ~.web
+entity --class ~.domain.ManualGroup --table manual_group --identifierField uid --identifierColumn uid --testAutomatically 
+field string --fieldName id --column id
+entity --class ~.domain.CharacterizedGroup --table characterized_group --identifierColumn uid --identifierField uid --testAutomatically 
+field string --fieldName id --column id
+controller all --package ~.web
+// [failed] entity --class ~.domain.ManualGroup
+field reference --fieldName application --type ~.domain.Application --cardinality MANY_TO_ONE --joinColumnName application --notNull true
+entity --class ~.domain.ManualGroupTranslation --table manual_group_translation --testAutomatically  --dentifierColumn uid --identifierField uid --testAutomatically 
+field string --fieldName name --column name --notNull true
+field string --fieldName description --column description --notNull false
+field reference --fieldName manualGroup --type ~.domain.ManualGroup --joinColumnName manual_group --cardinality MANY_TO_ONE --notNull true
+entity --class ~.domain.CharacterizedGroupTranslation --identifierField uid --identifierColumn uid --table characterized_group_translation --testAutomatically 
+field string --fieldName name --column name --notNull true
+field string --fieldName description --column description --notNull false
+field reference --fieldName locale --type ~.domain.Locale --notNull true --cardinality MANY_TO_ONE --joinColumnName locale
+field reference --fieldName characterizedGroup --type ~.domain.CharacterizedGroup --cardinality MANY_TO_ONE --notNull true --joinColumnName characterized_group
+// [failed] entity --class ~.domain.ManualGroupTranslation
+field reference --fieldName locale --type ~.domain.Locale --cardinality MANY_TO_ONE --joinColumnName locale --notNull true
+// [failed] field reference --fieldName manualGroup --type ~.domain.ManualGroup --cardinality MANY_TO_ONE --notNull true --joinColumnName manual_group
+controller all --package ~.web
+// [failed] entity --class ~.domain.ManualGroup
+field boolean --fieldName enabled --column enabled --notNull true
+// [failed] entity --class ~.domain.CharacterizedGroup
+field boolean --fieldName enabled --column enabled --notNull true
+// [failed] entity --class ~.domain.Permission
+// [failed] field reference --fieldName resource --type ~.domain.Resource --cardinality MANY_TO_ONE --notNull true --joinColumnName resource
+backup
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-12 23:11:38
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-12 23:11:43
+controller all --package ~.web
+// [failed] entity --class ~.domain.UserAccount
+field string --fieldName email --column email --notNull 
+entity --class ~.domain.CommonRole --table common_role --testAutomatically --identifierColumn uid --identifierField uid 
+field string --fieldName id --notNull true --column id
+field boolean --fieldName enabled --column enabled --notNull true
+field reference --type ~.domain.Application --fieldName application --cardinality MANY_TO_ONE --joinColumnName application --notNull true
+entity --class ~.domain.CommonRoleTranslation --table common_role_translation --identifierColumn uid --identifierField uid --testAutomatically 
+field string --fieldName name --column name --notNull true 
+field string --fieldName description --column description --notNull false
+field reference --type ~.domain.CommonRole --fieldName commonRole --cardinality MANY_TO_ONE --notNull true --joinColumnName common_role
+field reference --fieldName locale --type ~.domain.Locale --cardinality MANY_TO_ONE --joinColumnName locale --notNull true
+entity --class ~.domain.AdministrativeRole --identifierColumn uid --identifierField uid --testAutomatically --table administrative_role
+field string --fieldName id --column id --notNull true
+field reference --type ~.domain.Application --fieldName application --notNull true --joinColumnName application --cardinality MANY_TO_ONE
+entity --class ~.domain.AdministrativeRoleTranslation --table administrative_role_translation --identifierColumn uid --identifierField uid --testAutomatically 
+field reference --type ~.domain.Locale --fieldName locale --notNull true --joinColumnName locale --cardinality MANY_TO_ONE
+field reference --type ~.domain.AdministrativeRole --fieldName administrativeRole --joinColumnName administrative_role --cardinality MANY_TO_ONE --notNull true
+field string --fieldName name --column name --notNull true
+field string --fieldName description --column description --notNull false
+controller all --package ~.web
+// [failed] entity --class ~.domain.AdministrativeRole
+field boolean --fieldName enabled --column enabled --notNull true
+entity --class ~.domain.Characteristic --table characteristic --testAutomatically --identifierField uid --identifierColumn uid 
+field string --fieldName id --column id --notNull true
+entity --class ~.domain.CharacteristicTranslation --table characteristic_translation --identifierColumn uid --identifierField uid --testAutomatically 
+field string --fieldName name --column name --notNull true
+field string --fieldName description --column description --notNull false
+// [failed] field reference --fieldName characteristic --type ~.domain.Characteric --cardinality MANY_TO_ONE --joinColumnName characteristic --notNull true
+field reference --fieldName locale --type ~.domain.Locale --cardinality MANY_TO_ONE --joinColumnName locale --notNull true
+entity --class ~.domain.CharacteristicValue --table characteristic_value --identifierColumn uid --identifierField uid --testAutomatically
+field string --fieldName id --column id --notNull true
+field reference --fieldName characteristic --type ~.domain.Characteristic --joinColumnName characteristic --cardinality MANY_TO_ONE --notNull true
+entity --class ~.domain.CharacteristicValueTranslation --table characteristic_value_translation --identifierColumn uid --identifierField uid --testAutomatically 
+field string --fieldName name --column name --notNull true
+field string --fieldName description --column description --notNull false
+field reference --type ~.domain.Locale --fieldName locale --cardinality MANY_TO_ONE --joinColumnName locale --notNull true
+field reference --type ~.domain.CharacteristicValue --fieldName characteristicValue --joinColumnName characteristic_value --notNull true --cardinality MANY_TO_ONE
+controller all --package ~.web
+database properties list
+persistence setup --database POSTGRES --provider HIBERNATE --password anubis --userName anubis --databaseName anubis --jndiDataSource anubis
+database properties list
+database properties set --key database.driverClassName --value org.postgresql.Driver
+database properties set --key database.url --value jdbc:postgresql://localhost:5432/anubisframework
+database properties set --key database.password --value anubisframework
+database properties set --key database.username --value anubisframework
+database properties list
+database properties list
+database properties list
+entity --class ~.domain.User --table user --identifierField uid --identifierColumn uid --testAutomatically --permitReservedWords 
+field string --fieldName name --column name --notNull true
+field reference --type ~.domain.Locale --fieldName preferredLocale --cardinality MANY_TO_ONE --joinColumnName preferred_locale --notNull true
+field reference --type ~.domain.UserAccount --fieldName account --cardinality MANY_TO_ONE --notNull true --joinColumnName account
+controller all --package ~.web
+controller all --package ~.web
+controller all --package ~.web
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-13 00:35:52
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-13 00:35:57
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-13 00:37:08
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-13 00:37:23
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-13 00:37:51
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-13 00:39:21
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-23 12:52:32
+entity --class ~.domain.UserAssignedAdministrativeRole
+// [failed] entity --class ~.domain.UserAssignedAdministrativeRole --table user_assigned_administrative_role --identifierColumn uid --identifierField uid --testAutomatically 
+entity --class ~.domain.UserAssignedAdministrativeRole --table user_assigned_administrative_role --identifierColumn uid --identifierField uid --testAutomatically 
+// [failed] field reference --fieldName user --type ~.domain.User --cardinality MANY_TO_ONE --notNull true --joinColumnName user 
+field reference --fieldName user --type ~.domain.User --cardinality MANY_TO_ONE --notNull true --joinColumnName user --permitReservedWords 
+field reference --fieldName administrativeRole --type ~.domain.AdministrativeRole --cardinality MANY_TO_ONE --joinColumnName administrative_role --notNull true 
+field reference --fieldName validity --type ~.domain.Validity --notNull false --joinColumnName validity --cardinality MANY_TO_ONE 
+entity --class ~.domain.UserAssignedCommonRoleContextualization --identifierColumn uid --identifierField uid --testAutomatically --table user_assigned_common_role_contextualization
+field reference --fieldName userAssignedCommonRole --type ~.domain.UserAssignedCommonRole --cardinality MANY_TO_ONE --joinColumnName user_assigned_common_role --notNull true 
+field reference --fieldName contextValue --type ~.domain.ContextValue --cardinality MANY_TO_ONE --joinColumnName context_value --notNull true 
+entity --class ~.domain.CommonRoleAssignedPermission --table common_role_assigned_permission --identifierColumn uid --identifierField uid --testAutomatically 
+field reference --fieldName commonRole --type ~.domain.CommonRole --notNull true --cardinality MANY_TO_ONE --joinColumnName common_role
+field reference --fieldName permission --type ~.domain.Permission --cardinality MANY_TO_ONE --joinColumnName permission --notNull true 
+// [failed] entity --class ~.domain.UserAssignedCommonRoleContextualization
+field reference --fieldName commonRoleAssignedPermission --type ~.domain.CommonRoleAssignedPermission --cardinality MANY_TO_ONE --notNull true --joinColumnName common_role_assigned_permission 
+controller all --package ~.web
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-23 13:48:54
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-23 13:49:00
+controller all --package ~.web
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-23 21:49:33
+controller all --package ~.web
+database properties list
+// [failed] entity --class ~.domain.User
+field email template --fieldName mail 
+entity --class ~.domain.UserCharacteristicValue --table tb_user_characteristic_value --testAutomatically --identifierColumn uid --identifierField uid 
+// [failed] field reference --fieldName user --type ~.domain.User --cardinality MANY_TO_ONE --notNull true --joinColumnName user_uid
+field reference --fieldName user --type ~.domain.User --cardinality MANY_TO_ONE --notNull true --joinColumnName user_uid --permitReservedWords 
+field reference --fieldName characteristcValue --type ~.domain.CharacteristicValue --cardinality MANY_TO_ONE --joinColumnName characteristic_value_uid --notNull true 
+entity --class ~.domain.UserManualGroupMembership --table tb_user_manual_group_membership --identifierColumn uid --identifierField uid --testAutomatically 
+field reference --fieldName manualGroup --type ~.domain.ManualGroup --notNull true --cardinality MANY_TO_ONE --joinColumnName manual_group_uid 
+// [failed] field reference --fieldName user --type ~.domain.User --notNull --true --cardinality MANY_TO_ONE --joinColumnName user_uid 
+field reference --fieldName user --type ~.domain.User --notNull --true --cardinality MANY_TO_ONE --joinColumnName user_uid --permitReservedWords 
+entity --class ~.domain.PermissionConflict --table tb_permission_conflict --testAutomatically --identifierColumn uid --identifierField uid 
+field reference --fieldName permission --type ~.domain.Permission --cardinality MANY_TO_ONE --joinColumnName permission_uid --notNull true 
+field reference --fieldName permissionConflicted --type ~.domain.Permission --notNull true --cardinality MANY_TO_ONE --joinColumnName permission_conflicted_uid 
+entity --class ~.domain.PermissionConflictTranslation --table tb_permission_ConflictTranslation --testAutomatically --identifierColumn uid --identifierField uid 
+field reference --fieldName permissionConflict --type ~.domain.PermissionConflict --notNull true --cardinality MANY_TO_ONE --joinColumnName permission_conflict_uid 
+field string --fieldName name --notNull true --column name
+field string --fieldName description --notNull false --column description
+entity --class ~.domain.SupportedLocale --table tb_supported_locale --identifierField uid --identifierColumn uid --testAutomatically 
+field reference --fieldName locale --type ~.domain.Locale --notNull true --joinColumnName locale_uid --cardinality MANY_TO_ONE
+field reference --fieldName application --type ~.domain.Application --notNull true --joinColumnName application_uid --cardinality MANY_TO_ONE 
+field number --fieldName preference --type java.lang.Integer --notNull true --min 1 --column preference 
+controller all --package ~.web
+entity --class ~.domain.PermissionContext --table tb_permission_context --testAutomatically --identifierColumn uid --identifierField uid 
+field reference --fieldName context --type ~.domain.Context --notNull true --cardinality MANY_TO_ONE --joinColumnName context_uid 
+// [failed] field reference --fieldName permission --type ~.domain.PermissionCon --notNull true --cardinality MANY_TO_ONE --joinColumnName permission_uid
+// [failed] field reference --fieldName permission --type ~.domain.PermissionCon --notNull true --cardinality MANY_TO_ONE --joinColumnName permission_uid
+field reference --fieldName permission --type ~.domain.Permission --notNull true --cardinality MANY_TO_ONE --joinColumnName permission_uid
+entity --class ~.domain.Inactivation --table tb_inactivation --testAutomatically --identifierColumn uid --identifierField uid 
+entity --class ~.domain.InactivationTranslation --table tb_inactivation_translation --identifierColumn uid --identifierField uid --testAutomatically 
+field reference --fieldName inactivation --type ~.domain.Inactivation --joinColumnName inactivation_uid --cardinality MANY_TO_ONE --notNull true 
+field string --fieldName reason --notNull true --column reason 
+entity --class ~.domain.UserInactivation --table tb_user_inactivation --testAutomatically --identifierColumn uid --identifierField uid 
+// [failed] field reference --fieldName user --type ~.domain.User --notNull true --joinColumnName user_uid --cardinality MANY_TO_ONE
+field reference --fieldName user --type ~.domain.User --notNull true --joinColumnName user_uid --cardinality MANY_TO_ONE --permitReservedWords 
+field reference --type ~.domain.Inactivation --fieldName inactivation --notNull true --joinColumnName inactivation_uid --cardinality MANY_TO_ONE 
+// [failed] entity --class ~.domain.Inactivation
+field reference --fieldName validity --type ~.domain.Validity --notNull false --carad sadasd
+// [failed] field reference --fieldName validity --type ~.domain.Validity --notNull false --joinColumnName validity_uid 
+field reference --fieldName validity --type ~.domain.Validity --notNull false --joinColumnName validity_uid 
+entity --class ~.domain.ManualGroupInactivation --table tb_manual_group_inactivation --identifierColumn uid --identifierField uid --testAutomatically 
+field reference --fieldName manualGroup --type ~.domain.ManualGroup --notNull true --cardinality MANY_TO_ONE --joinColumnName manual_group_uid 
+field reference --fieldName validity --type ~.domain.Validity --notNull true --joinColumnName validity_uid 
+entity --class ~.domain.CharacterizedGroupInactivation --table tb_characterized_group_inactivation --identifierColumn uid --identifierField uid --testAutomatically 
+field reference --fieldName characterizedGroup --type ~.domain.CharacterizedGroup --cardinality MANY_TO_ONE --joinColumnName characterized_group_uid --notNull true 
+field reference --fieldName inactivation --type ~.domain.Inactivation --notNull true --joinColumnName inactivation_uid 
+controller all --package ~.web
+entity --class ~.domain.ManualGroupAssignedCommonRole --table tb_manual_group_assigned_common_role --testAutomatically --identifierField uid --identifierColumn uid 
+field reference --fieldName manualGroup --type ~.domain.ManualGroup --notNull true --cardinality MANY_TO_ONE --joinColumnName manual_group_uid 
+field reference --fieldName commonRole --type ~.domain.CommonRole --cardinality MANY_TO_ONE --notNull true --joinColumnName common_role_uid 
+// [failed] field reference --fieldName manualGroup --type ~.domain.ManualGroup --cardinality MANY_TO_ONE --joinColumnName manual_group_uid --notNull true 
+entity --class ~.domain.CharacterizedGroupAssignedCommonRole --table tb_characterized_group_assigned_common_role --identifierColumn uid --identifierField uid --testAutomatically 
+field reference --fieldName commonRole --type ~.domain.CommonRole --cardinality MANY_TO_ONE --joinColumnName common_role_uid --notNull true 
+field reference --fieldName characterizedGroup --type ~.domain.CharacterizedGroup --notNull true --joinColumnName characterized_group_uid --cardinality MANY_TO_ONE 
+entity --class ~.domain.ManualGroupAssignedAdministrativeRole --table tb_manual_group_assigned_administrative_role --testAutomatically --identifierColumn uid --identifierField uid 
+field reference --fieldName manualGroup --type ~.domain.ManualGroup --notNull true --cardinality MANY_TO_ONE --joinColumnName manual_group_uid 
+field reference --fieldName administrativeRole --type ~.domain.AdministrativeRole --cardinality MANY_TO_ONE --joinColumnName administrative_role_uid --notNull true 
+entity --class ~.domain.CharacterizedGroupAssignedAdministrativeRole --table tb_characterized_group_assigned_administrative_role --testAutomatically --identifierField uid --identifierColumn uid 
+field reference --fieldName characterizedGroup --type ~.domain.CharacterizedGroup --cardinality MANY_TO_ONE --notNull true --joinColumnName characterized_group_uid 
+field reference --fieldName administrativeRole --type ~.domain.AdministrativeRole --cardinality MANY_TO_ONE --joinColumnName administrative_role_uid --notNull true 
+entity --class ~.domain.CharacterizedGroupCharacteristicValue --table tb_characterized_group_characteristic_value --testAutomatically --identifierColumn uid --identifierField uid 
+field reference --fieldName characterizedGroup --type ~.domain.CharacterizedGroup --notNull true --joinColumnName characterized_group_uid --cardinality MANY_TO_ONE 
+field reference --fieldName characteristicValue --type ~.domain.CharacteristicValue --cardinality MANY_TO_ONE --joinColumnName characteristic_value_uid --notNull true 
+controller all --package ~.web
+exit
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-24 01:48:42
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-24 12:03:24
+entity --class ~.domain.UserAssignedSecurityAdministrativeRole --testAutomatically --table tb_user_assigned_security_administrative_role --identifierColumn uid --identifierField uid 
+// [failed] field reference --fieldName user --type ~.domain.User --joinColumnName user_uid --notNull true
+field reference --fieldName user --type ~.domain.User --joinColumnName user_uid --notNull true --permitReservedWords 
+field reference --fieldName validity --type ~.domain.Validity --notNull true --joinColumnName validity_uid 
+controller all --package ~.web
+controller all --package ~.web

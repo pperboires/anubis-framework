@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="inactivation/list">
+        <put-attribute name="body" value="/WEB-INF/views/inactivation/list.jspx"/>
+    </definition>
+    <definition extends="default" name="inactivation/show">
+        <put-attribute name="body" value="/WEB-INF/views/inactivation/show.jspx"/>
+    </definition>
+    <definition extends="default" name="inactivation/create">
+        <put-attribute name="body" value="/WEB-INF/views/inactivation/create.jspx"/>
+    </definition>
+    <definition extends="default" name="inactivation/update">
+        <put-attribute name="body" value="/WEB-INF/views/inactivation/update.jspx"/>
+    </definition>
+</tiles-definitions>

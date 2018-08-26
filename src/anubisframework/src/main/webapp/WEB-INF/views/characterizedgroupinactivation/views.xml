@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="characterizedgroupinactivation/list">
+        <put-attribute name="body" value="/WEB-INF/views/characterizedgroupinactivation/list.jspx"/>
+    </definition>
+    <definition extends="default" name="characterizedgroupinactivation/show">
+        <put-attribute name="body" value="/WEB-INF/views/characterizedgroupinactivation/show.jspx"/>
+    </definition>
+    <definition extends="default" name="characterizedgroupinactivation/create">
+        <put-attribute name="body" value="/WEB-INF/views/characterizedgroupinactivation/create.jspx"/>
+    </definition>
+    <definition extends="default" name="characterizedgroupinactivation/update">
+        <put-attribute name="body" value="/WEB-INF/views/characterizedgroupinactivation/update.jspx"/>
+    </definition>
+</tiles-definitions>

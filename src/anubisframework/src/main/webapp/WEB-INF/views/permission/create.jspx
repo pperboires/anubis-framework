@@ -1,0 +1,53 @@
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:form="http://www.springframework.org/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <script type="text/javascript">dojo.require('dijit.TitlePane');dojo.require('dijit.form.FilteringSelect');</script>
+    <div id="_title_div">
+        <spring:message code="label.permission" var="entity_label"/>
+        <spring:message arguments="${entity_label}" code="entity.create" var="title_msg"/>
+        <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_title_div', widgetType : 'dijit.TitlePane', widgetAttrs : {title: '${title_msg}'}})); </script>
+        <spring:url value="/permission" var="form_url"/>
+        <form:form action="${form_url}" method="POST" modelAttribute="permission">
+            <form:errors cssClass="errors" delimiter="&lt;p/&gt;"/>
+            <div id="roo_permission_enabled">
+                <label for="_enabled_id">Enabled:</label>
+                <form:checkbox id="_enabled_id" path="enabled"/>
+            </div>
+            <br/>
+            <div id="roo_permission_contextualized">
+                <label for="_contextualized_id">Contextualized:</label>
+                <form:checkbox id="_contextualized_id" path="contextualized"/>
+            </div>
+            <br/>
+            <div id="roo_permission_audited">
+                <label for="_audited_id">Audited:</label>
+                <form:checkbox id="_audited_id" path="audited"/>
+            </div>
+            <br/>
+            <div id="roo_permission_operation">
+                <c:if test="${not empty operations}">
+                    <label for="_operation_id">Operation:</label>
+                    <form:select cssStyle="width:250px" id="_operation_id" path="operation">
+                        <form:options itemValue="uid" items="${operations}"/>
+                    </form:select>
+                    <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_operation_id', widgetType: 'dijit.form.FilteringSelect', widgetAttrs : {hasDownArrow : true}})); </script>
+                </c:if>
+            </div>
+            <br/>
+            <div id="roo_permission_resource">
+                <c:if test="${not empty resources}">
+                    <label for="_resource_id">Resource:</label>
+                    <form:select cssStyle="width:250px" id="_resource_id" path="resource">
+                        <form:options itemValue="uid" items="${resources}"/>
+                    </form:select>
+                    <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_resource_id', widgetType: 'dijit.form.FilteringSelect', widgetAttrs : {hasDownArrow : true}})); </script>
+                </c:if>
+            </div>
+            <br/>
+            <div class="submit" id="roo_permission_submit">
+                <spring:message code="button.save" var="save_button"/>
+                <script type="text/javascript">Spring.addDecoration(new Spring.ValidateAllDecoration({elementId:'proceed', event:'onclick'}));</script>
+                <input id="proceed" type="submit" value="${save_button}"/>
+            </div>
+        </form:form>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" xmlns:form="http://www.springframework.org/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <script type="text/javascript">dojo.require('dijit.TitlePane');</script>
+    <div id="_title_div">
+        <spring:message code="label.permission" var="entity_label"/>
+        <spring:message arguments="${entity_label}" code="entity.show" var="title_msg"/>
+        <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_title_div', widgetType : 'dijit.TitlePane', widgetAttrs : {title: '${title_msg}'}})); </script>
+        <c:if test="${not empty permission}">
+            <div id="roo_permission_enabled">
+                <label for="_enabled_id">Enabled:</label>
+                <div class="box" id="_enabled_id">
+                    <c:out value="${permission.enabled}"/>
+                </div>
+            </div>
+            <br/>
+            <div id="roo_permission_contextualized">
+                <label for="_contextualized_id">Contextualized:</label>
+                <div class="box" id="_contextualized_id">
+                    <c:out value="${permission.contextualized}"/>
+                </div>
+            </div>
+            <br/>
+            <div id="roo_permission_audited">
+                <label for="_audited_id">Audited:</label>
+                <div class="box" id="_audited_id">
+                    <c:out value="${permission.audited}"/>
+                </div>
+            </div>
+            <br/>
+            <div id="roo_permission_operation">
+                <label for="_operation_id">Operation:</label>
+                <div class="box" id="_operation_id">
+                    <c:out value="${permission.operation}"/>
+                </div>
+            </div>
+            <br/>
+            <div id="roo_permission_resource">
+                <label for="_resource_id">Resource:</label>
+                <div class="box" id="_resource_id">
+                    <c:out value="${permission.resource}"/>
+                </div>
+            </div>
+            <br/>
+        </c:if>
+        <c:if test="${empty permission}">
+            <spring:message arguments="${entity_label}" code="entity.not.found.single"/>
+        </c:if>
+    </div>
+</div>
